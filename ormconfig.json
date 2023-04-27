@@ -1,0 +1,18 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "admin",
+    "password": "admin",
+    "database": "auction_api",
+    "migrations": [
+        "./src/shared/infra/typeorm/migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    },
+    "migrationsRun": true,
+    "entities": [
+        "./src/modules/**/entities/*.ts"
+    ]
+}
