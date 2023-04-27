@@ -52,7 +52,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/app/auction-api/
+            cd ~/app/auction-api
             yarn
             ./node_modules/bin/typeorm migration:run
             pm2 restart auction-api
